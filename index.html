@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | POLLUTION</title>
+  <meta name="description" content="A student website about plastic, air, water and land pollution and the simple actions students can take.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Navigation bar (the same on every page) ===== -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="index.html">POLLUTION</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li class="dropdown" id="types-dropdown">
+            <button class="dropdown-button" id="types-button" type="button" aria-expanded="false" aria-controls="types-menu">Types of Pollution &#9662;</button>
+            <ul class="dropdown-menu" id="types-menu">
+              <li><a href="plastic.html">Plastic Pollution</a></li>
+              <li><a href="air.html">Air Pollution</a></li>
+              <li><a href="water.html">Water Pollution</a></li>
+              <li><a href="land.html">Land Pollution</a></li>
+            </ul>
+          </li>
+          <li><a href="actions.html">Actions</a></li>
+          <li><a href="school.html">Pollution in Our School</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+
+    <!-- ===== Introduction panel ===== -->
+    <section class="intro-panel">
+      <div>
+        <h1>Small choices can create big change</h1>
+        <p>Pollution affects the air we breathe, the water we use and the places where we live. This website helps students understand different types of pollution and discover simple actions they can take to protect the environment.</p>
+      </div>
+      <figure class="intro-image">
+        <img src="home-school-garden.jpg" alt="Tall trees and green plants in the school garden, with stone classroom buildings behind them." width="1200" height="900">
+      </figure>
+    </section>
+
+    <!-- ===== Four information cards ===== -->
+    <section class="section" aria-labelledby="cards-heading">
+      <h2 id="cards-heading">Types of pollution</h2>
+      <div class="card-grid">
+        <article class="card">
+          <span class="icon-circle plastic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4v3l2 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8l2-3z"/><path d="M8 13h8"/></svg></span>
+          <h3>Plastic Pollution</h3>
+          <p>Plastic bottles, food wrappers and packaging can build up in the environment and harm animals.</p>
+          <a class="button" href="plastic.html">Learn More<span class="visually-hidden"> about plastic pollution</span></a>
+        </article>
+        <article class="card">
+          <span class="icon-circle air"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1.5A4.5 4.5 0 0 1 17.5 18z"/></svg></span>
+          <h3>Air Pollution</h3>
+          <p>Smoke and harmful gases from vehicles, factories and burning waste can affect the air we breathe.</p>
+          <a class="button" href="air.html">Learn More<span class="visually-hidden"> about air pollution</span></a>
+        </article>
+        <article class="card">
+          <span class="icon-circle water"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span>
+          <h3>Water Pollution</h3>
+          <p>Waste, chemicals and other harmful substances can enter rivers, lakes and oceans.</p>
+          <a class="button" href="water.html">Learn More<span class="visually-hidden"> about water pollution</span></a>
+        </article>
+        <article class="card">
+          <span class="icon-circle land"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 11 10 6 19 5c0 9-5 14-14 14z"/><path d="M5 19l8-8"/></svg></span>
+          <h3>Land Pollution</h3>
+          <p>Litter and incorrect waste disposal can damage soil, habitats and shared environments.</p>
+          <a class="button" href="land.html">Learn More<span class="visually-hidden"> about land pollution</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Why should students care? ===== -->
+    <section class="section panel" aria-labelledby="why-heading">
+      <h2 id="why-heading">Why should students care about pollution?</h2>
+      <p>Every school day is full of small choices. One choice may seem too small to matter, but hundreds of students making the same choice every day adds up quickly.</p>
+      <ul class="example-list">
+        <li><strong>Plastic bottles</strong>A single-use bottle is used for a few minutes but can stay in the environment for many years.</li>
+        <li><strong>Snack wrappers</strong>A wrapper left on a table or bench can be blown into gardens and drains.</li>
+        <li><strong>School transport</strong>Sharing a bus or a car means fewer vehicles on the road and fewer exhaust gases.</li>
+        <li><strong>Water wastage</strong>A tap left running wastes clean water that takes energy to treat and supply.</li>
+        <li><strong>Waste disposal</strong>Rubbish in the wrong bin cannot be recycled and may end up as litter.</li>
+      </ul>
+    </section>
+
+    <section class="section panel quiz-banner">
+      <div>
+        <h2>Test your knowledge</h2>
+        <p>Try the short pollution quiz and see how much you have learned.</p>
+      </div>
+      <a class="button" href="quiz.html">Take the Quiz</a>
+    </section>
+
+    <!-- ===== Student action strip (the same on every main page) ===== -->
+    <section class="section action-strip" aria-labelledby="strip-heading">
+      <h2 id="strip-heading">WHAT STUDENTS CAN DO</h2>
+      <ul class="action-list">
+        <li>
+          <span class="icon-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4v3l2 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8l2-3z"/><path d="M8 13h8"/></svg></span>
+          <div><strong>Use a refillable bottle</strong><span class="small">Refill it at school instead of buying single-use plastic bottles.</span></div>
+        </li>
+        <li>
+          <span class="icon-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span>
+          <div><strong>Save water</strong><span class="small">Turn taps off fully and report any tap that is leaking.</span></div>
+        </li>
+        <li>
+          <span class="icon-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/></svg></span>
+          <div><strong>Sort waste correctly</strong><span class="small">Put every wrapper, bottle and piece of paper in the correct bin.</span></div>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer (the same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sources.html">Sources</a></li>
+      </ul>
+      <p>Pollution Awareness Website — IB MYP 5 Digital Design Project.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

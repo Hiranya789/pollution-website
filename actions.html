@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actions Students Can Take | POLLUTION</title>
+  <meta name="description" content="Practical actions students can take to reduce waste, save water and sort waste, with an interactive checklist.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Navigation bar (the same on every page) ===== -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="index.html">POLLUTION</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown" id="types-dropdown">
+            <button class="dropdown-button" id="types-button" type="button" aria-expanded="false" aria-controls="types-menu">Types of Pollution &#9662;</button>
+            <ul class="dropdown-menu" id="types-menu">
+              <li><a href="plastic.html">Plastic Pollution</a></li>
+              <li><a href="air.html">Air Pollution</a></li>
+              <li><a href="water.html">Water Pollution</a></li>
+              <li><a href="land.html">Land Pollution</a></li>
+            </ul>
+          </li>
+          <li><a href="actions.html" class="active" aria-current="page">Actions</a></li>
+          <li><a href="school.html">Pollution in Our School</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+
+    <!-- ===== Introduction panel ===== -->
+    <section class="intro-panel">
+      <div>
+        <h1>Actions Students Can Take</h1>
+        <p>Students can help protect the environment through small, consistent actions. Reducing waste, saving water and working together can make school communities cleaner and more sustainable.</p>
+      </div>
+      <figure class="intro-image">
+        <img src="water-conservation-school.jpg" alt="The clean, covered school water station with a row of taps and green benches." width="1200" height="900">
+      </figure>
+    </section>
+
+    <!-- ===== Four information cards ===== -->
+    <section class="section" aria-labelledby="cards-heading">
+      <h2 id="cards-heading">Four ways to take action</h2>
+      <div class="card-grid">
+        <article class="card">
+          <span class="icon-circle plastic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4v3l2 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8l2-3z"/><path d="M8 13h8"/></svg></span>
+          <h3>Reduce Waste</h3>
+          <p>The best waste is the waste that is never created.</p>
+          <ul>
+            <li>Carry a refillable bottle</li>
+            <li>Use reusable containers</li>
+            <li>Avoid unnecessary packaging</li>
+            <li>Reduce paper waste</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="icon-circle water"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span>
+          <h3>Save Water</h3>
+          <p>Clean water is valuable and should not be wasted.</p>
+          <ul>
+            <li>Turn off taps</li>
+            <li>Report leaks</li>
+            <li>Avoid wasting water</li>
+            <li>Encourage responsible use</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="icon-circle land"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/></svg></span>
+          <h3>Sort Waste</h3>
+          <p>Waste can only be recycled if it goes in the correct bin.</p>
+          <ul>
+            <li>Use the correct bins</li>
+            <li>Separate recyclable materials where facilities exist</li>
+            <li>Avoid mixing recyclable and general waste</li>
+            <li>Follow school waste disposal rules</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="icon-circle green"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 15c2.5 0 4 2 4 5"/></svg></span>
+          <h3>Work Together</h3>
+          <p>Actions have more effect when a whole community takes part.</p>
+          <ul>
+            <li>Join organised clean-ups</li>
+            <li>Create environmental posters</li>
+            <li>Encourage responsible habits</li>
+            <li>Participate in environmental school activities</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Interactive checklist (works with script.js) ===== -->
+    <section class="section panel" aria-labelledby="checklist-heading">
+      <h2 id="checklist-heading">My Environmental Action Checklist</h2>
+      <p>Tick each action you have completed. Your ticks are saved only in this browser on this device. No personal information is collected.</p>
+      <ul class="checklist" id="checklist">
+        <li><label><input type="checkbox"> I used a reusable bottle.</label></li>
+        <li><label><input type="checkbox"> I saved water.</label></li>
+        <li><label><input type="checkbox"> I disposed of rubbish correctly.</label></li>
+        <li><label><input type="checkbox"> I avoided unnecessary plastic.</label></li>
+        <li><label><input type="checkbox"> I encouraged someone to protect the environment.</label></li>
+      </ul>
+      <div class="progress-row">
+        <strong id="progress-text" aria-live="polite">0 of 5 actions completed</strong>
+        <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
+        <button class="button button-outline" id="reset-checklist" type="button">Reset</button>
+      </div>
+    </section>
+
+    <section class="section panel quiz-banner">
+      <div>
+        <h2>Test your knowledge</h2>
+        <p>Try the short pollution quiz and see how much you have learned.</p>
+      </div>
+      <a class="button" href="quiz.html">Take the Quiz</a>
+    </section>
+
+    <!-- ===== Student action strip (the same on every main page) ===== -->
+    <section class="section action-strip" aria-labelledby="strip-heading">
+      <h2 id="strip-heading">WHAT STUDENTS CAN DO</h2>
+      <ul class="action-list">
+        <li>
+          <span class="icon-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4v3l2 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8l2-3z"/><path d="M8 13h8"/></svg></span>
+          <div><strong>Use a refillable bottle</strong><span class="small">Refill it at school instead of buying single-use plastic bottles.</span></div>
+        </li>
+        <li>
+          <span class="icon-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span>
+          <div><strong>Save water</strong><span class="small">Turn taps off fully and report any tap that is leaking.</span></div>
+        </li>
+        <li>
+          <span class="icon-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/></svg></span>
+          <div><strong>Sort waste correctly</strong><span class="small">Put every wrapper, bottle and piece of paper in the correct bin.</span></div>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer (the same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sources.html">Sources</a></li>
+      </ul>
+      <p>Pollution Awareness Website — IB MYP 5 Digital Design Project.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

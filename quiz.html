@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pollution Quiz | POLLUTION</title>
+  <meta name="description" content="A short multiple-choice quiz about plastic, air, water and land pollution.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Navigation bar (the same on every page) ===== -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="index.html">POLLUTION</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown" id="types-dropdown">
+            <button class="dropdown-button" id="types-button" type="button" aria-expanded="false" aria-controls="types-menu">Types of Pollution &#9662;</button>
+            <ul class="dropdown-menu" id="types-menu">
+              <li><a href="plastic.html">Plastic Pollution</a></li>
+              <li><a href="air.html">Air Pollution</a></li>
+              <li><a href="water.html">Water Pollution</a></li>
+              <li><a href="land.html">Land Pollution</a></li>
+            </ul>
+          </li>
+          <li><a href="actions.html">Actions</a></li>
+          <li><a href="school.html">Pollution in Our School</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+
+    <section class="section text-page">
+      <h1>Pollution Quiz</h1>
+      <p>Answer the six questions, then select Check My Answers. Your answers are not saved or sent anywhere.</p>
+
+      <!-- The correct answer for each question is stored in data-answer. script.js marks the quiz. -->
+      <form id="quiz-form">
+        <fieldset class="quiz-question" data-answer="a" data-explanation="Microplastics are tiny pieces, less than 5 mm long, often formed when larger plastics break apart.">
+          <legend>1. Plastic pollution: what are microplastics?</legend>
+          <label><input type="radio" name="q1" value="a"> Very small pieces of plastic, less than 5 mm long</label>
+          <label><input type="radio" name="q1" value="b"> Plastic bottles that can be refilled</label>
+          <label><input type="radio" name="q1" value="c"> A type of plastic that rots away in a few days</label>
+          <p class="feedback" hidden></p>
+        </fieldset>
+        <fieldset class="quiz-question" data-answer="b" data-explanation="Vehicles that burn petrol or diesel release exhaust gases and small particles into the air.">
+          <legend>2. Air pollution: which of these is a common source of air pollution?</legend>
+          <label><input type="radio" name="q2" value="a"> Planting trees</label>
+          <label><input type="radio" name="q2" value="b"> Vehicle exhaust</label>
+          <label><input type="radio" name="q2" value="c"> Refilling a water bottle</label>
+          <p class="feedback" hidden></p>
+        </fieldset>
+        <fieldset class="quiz-question" data-answer="c" data-explanation="Untreated wastewater can carry harmful substances into rivers, lakes and oceans.">
+          <legend>3. Water pollution: which of these can pollute a river?</legend>
+          <label><input type="radio" name="q3" value="a"> Rain falling on the river</label>
+          <label><input type="radio" name="q3" value="b"> Fish swimming in the river</label>
+          <label><input type="radio" name="q3" value="c"> Untreated wastewater entering the river</label>
+          <p class="feedback" hidden></p>
+        </fieldset>
+        <fieldset class="quiz-question" data-answer="a" data-explanation="Disposing of waste correctly keeps litter off the ground and out of soil and habitats.">
+          <legend>4. Land pollution: which action helps to reduce land pollution?</legend>
+          <label><input type="radio" name="q4" value="a"> Putting rubbish in the correct bin</label>
+          <label><input type="radio" name="q4" value="b"> Leaving wrappers on a bench</label>
+          <label><input type="radio" name="q4" value="c"> Buying items with extra packaging</label>
+          <p class="feedback" hidden></p>
+        </fieldset>
+        <fieldset class="quiz-question" data-answer="b" data-explanation="A running tap wastes clean water. Pollution is when harmful substances get into water.">
+          <legend>5. Water at school: leaving a tap running is an example of what?</legend>
+          <label><input type="radio" name="q5" value="a"> Water pollution</label>
+          <label><input type="radio" name="q5" value="b"> Water wastage</label>
+          <label><input type="radio" name="q5" value="c"> Water treatment</label>
+          <p class="feedback" hidden></p>
+        </fieldset>
+        <fieldset class="quiz-question" data-answer="c" data-explanation="Reducing waste comes first. A refillable bottle means no bottle is thrown away at all.">
+          <legend>6. Taking action: which choice creates the least waste?</legend>
+          <label><input type="radio" name="q6" value="a"> Buying a new plastic bottle every day</label>
+          <label><input type="radio" name="q6" value="b"> Recycling a plastic bottle every day</label>
+          <label><input type="radio" name="q6" value="c"> Carrying a refillable bottle</label>
+          <p class="feedback" hidden></p>
+        </fieldset>
+        <button class="button" type="submit">Check My Answers</button>
+        <button class="button button-outline" type="reset">Try Again</button>
+        <p class="quiz-result" id="quiz-result" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- ===== Student action strip (the same on every main page) ===== -->
+    <section class="section action-strip" aria-labelledby="strip-heading">
+      <h2 id="strip-heading">WHAT STUDENTS CAN DO</h2>
+      <ul class="action-list">
+        <li>
+          <span class="icon-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4v3l2 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8l2-3z"/><path d="M8 13h8"/></svg></span>
+          <div><strong>Use a refillable bottle</strong><span class="small">Refill it at school instead of buying single-use plastic bottles.</span></div>
+        </li>
+        <li>
+          <span class="icon-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span>
+          <div><strong>Save water</strong><span class="small">Turn taps off fully and report any tap that is leaking.</span></div>
+        </li>
+        <li>
+          <span class="icon-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/></svg></span>
+          <div><strong>Sort waste correctly</strong><span class="small">Put every wrapper, bottle and piece of paper in the correct bin.</span></div>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer (the same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sources.html">Sources</a></li>
+      </ul>
+      <p>Pollution Awareness Website — IB MYP 5 Digital Design Project.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
